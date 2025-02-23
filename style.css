@@ -2,3 +2,10 @@
 :root{
     --bs-body-font-family : 'Roboto','sans-serif'
 }
+pre[class*="language-javascript"] {
+    white-space: pre-wrap; /* Wrap long lines */
+    word-break: break-word;
+    margin: auto !important;   
+    max-width: 90%; /* Fit within the container */
+    
+}

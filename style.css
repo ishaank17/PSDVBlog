@@ -34,3 +34,11 @@ body{
     font-size: 1em !important;  /* Adjust the number size */
     font-weight:bold;
   }
+  pre[class*="language-"], code[class*="language-"] {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 1.2 !important; /* Reduces extra spacing from line-height */
+    border: none !important; /* Some themes add unnecessary borders */
+}

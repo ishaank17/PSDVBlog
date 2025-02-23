@@ -18,8 +18,7 @@ function drawVisualization() {
   }
   console.log("Data being passed:", graphData);
   var graphOptions = {
-    width: "600px",
-    height: "600px",
+    
     style: "surface",
     showPerspective: true,
     showGrid: true,

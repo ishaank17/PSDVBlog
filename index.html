@@ -1,24 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/vis-graph3d@latest/dist/vis-graph3d.min.js"></script>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+
+
+  <script type="text/javascript" src="https://unpkg.com/vis-graph3d@latest/dist/vis-graph3d.min.js"></script>
+
   <script type="text/javascript" src="code.js"></script>
 
 
-  </head>
-  <body onload="drawVisualization();">
-    <h1><bold>This Is PSDV Blog</bold></h1>
 
-    <pre><code class="language-javascript">
-      // Function to calculate z-values based on x and y
-function custom(x, y) {
+</head>
+
+<body onload="drawVisualization();" >
+
+  <div class="text-center mt-5 ">
+    <h1><strong>Vis.js</strong></h1>
+  </div>
+
+  <div class="fs-3 fw-medium">
+    A JavaScript library for interactive visualization of data.
+  </div>
+
+  <div class="text-left mt-5 ">
+    <h2><strong>Introduction</strong></h2>
+  </div>
+
+  <div class="fs-5">
+    vis.js is a JavaScript library with a modular structure. It contains multiple components like Network, Timeline,
+    Graph2D, and Graph3D. It is a powerful tool that helps with the dynamic visualization of data. This data can be
+    updated in real time, causing changes in the graph elements. It is used by many developers and is supported across
+    almost all web browsers. Almende B.V. originally developed it, but it is now a community-driven project and is
+    hosted on GitHub.
+    This library is set apart from many other libraries by handling large datasets efficiently and being entirely
+    JavaScript-based, implying that it can run completely using only the browser and that no heavy external libraries
+    need to be installed. It can also smoothly render the animations without lag while having highly intuitive
+    interaction. Its physics engine makes the interaction feel more realistic and fun.
+  </div>
+
+  <div class="text-left mt-5 ">
+    <h2><strong>Installation Guide</strong></h2>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <strong>Using a CDN (Recommended for Quick Use)</strong> <br> 
+      Simply add this script to your HTML file:<br>  
+      <code class="language-html">
+        &lt;script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"&gt;&lt;/script&gt;
+      </code>
+    </li>
+
+
+    <li class="list-group-item"><strong>Using npm (For Node.js Projects)</strong><br>
+      Run the following command in your terminal:<br>
+      <code class="language-bash">
+        npm install vis-network
+      </code><br>
+      Then, import it into your JavaScript file:<br>
+  <code class="language-javascript">
+    import { Network } from "vis-network";
+        </code><br>
+        It works with well with Reaxt, Vue and Node.js projects 
+    </li>
+
+
+    <li class="list-group-item"><strong>Downloading Manually</strong><br>
+      Go to <a href="https://github.com/visjs/vis-network" target="_blank">vis.js GitHub</a> <br>
+
+      Download the latest vis-network.min.js file and include it in your project.  
+    </li>
+  </ul>
+
+  <div class="text-left mt-5 ">
+    <h2><strong>Key Features and Explaination</strong></h2>
+  </div>
+
+  <div class="fs-5">
+    <ul>
+      <li> <strong>Interactivity :</strong>  Enhance user engagement with features like zooming, panning, and real-time data manipulation. </li>
+      
+      <li> <strong>Network Visualization :</strong>  Create dynamic, customizable network graphs with support for custom shapes, styles, colours, sizes, and images. The library ensures smooth performance on modern browsers, even with datasets comprising thousands of nodes and edges.  
+        These graphs are wonderful for visualizing the connections between different elements and interacting with the different nodes and connections is also possible, along with this we can change the attributes of the physics engine to make it feel the way we want it to.
+        <iframe src="https://visjs.github.io/vis-network/examples/network/physics/physicsConfiguration.html " width="100%" height="500px" style="border: none;"></iframe>
+      </li>
+
+
+      <li> <strong>Timeline Visualization :</strong>  
+        Develop fully customizable, interactive timelines that can display items and ranges, making it ideal for time-based data representation. This can easily be added, and the inbuilt features make it easy for us to move through and interact with the elements of the timeline.
+              <iframe src="https://visjs.github.io/vis-timeline/examples/timeline/styling/customCss.html  " width="100%" height="500px" style="border: none;"></iframe>
+      </li>
+
+
+      <li> <strong>3D Graphs :</strong>  
+        Generate interactive, animated 3D graphs, including surfaces, lines, dots, and block styles, to represent complex data structures.
+        <div id="mygraph"></div>
+      </li>
+      
+      <li> <strong>Data Management :</strong>  
+        Utilize the vis-data module to manage unstructured data efficiently, allowing for seamless addition, updating, and removal of data points. The changes pushed from the user side can update the elements in real time using vis.js data management. 
+      </li>
+      </ul>
+  </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <pre><code class="language-javascript">
+  // Function to calculate z-values based on x and y
+  function custom(x, y) {
     return Math.sin(x / 50) * Math.cos(y / 50) * 50 + 50;
   }
 
@@ -55,10 +165,11 @@ function custom(x, y) {
     new vis.Graph3d(container, data, options);
   }
     </code></pre>
-    
-    <div  id="mygraph"></div>
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+  
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

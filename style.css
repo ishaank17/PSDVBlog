@@ -5,7 +5,11 @@
 pre[class*="language-javascript"] {
     white-space: pre-wrap; /* Wrap long lines */
     word-break: break-word;
-    margin: auto !important;   
+    /* margin: auto !important;    */
     max-width: 90%; /* Fit within the container */
     
 }
+body{
+    margin:5%;
+}
+

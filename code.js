@@ -66,8 +66,8 @@ function drawTimeline() {
     new vis.Timeline(container, items, {}); 
 }
 // Ensure both visualizations run after the page loads
-document.addEventListener("DOMContentLoaded", function () {
-  drawVisualization();
-  drawNodeGraph();
-  drawTimeline();
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   drawVisualization();
+//   drawNodeGraph();
+//   drawTimeline();
+// });

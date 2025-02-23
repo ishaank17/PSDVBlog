@@ -26,13 +26,17 @@ body{
   }
 
   ol li::marker {
-    font-size: 1.5em;  /* Adjust the number size */
+     font-size: 1.5em; /* Adjust the number size */
     font-weight:bold;
   }
 
-  ol.h4 li::marker {
-    font-size: 1em !important;  /* Adjust the number size */
+  ol.small li::marker {
+    font-size: 1em ;  /* Adjust the number size */
     font-weight:bold;
+  }
+
+  ol.small {
+    font-size: 1.1em;
   }
   pre[class*="language-"], code[class*="language-"] {
     padding-top: 0 !important;

@@ -86,8 +86,8 @@
     </div>
 
     <div class="fs-5">
-      <ol >
-        <li >
+      <ol>
+        <li>
           <div class="text-left mt-5 ">
             <h3><strong>Components of vis.js </vis></strong></h3>
           </div>
@@ -142,7 +142,7 @@
             <h3><strong>Highly Customizable </strong></h3>
           </div>
           <ul type="disc">
-            <li>You can <b>change colors, shapes, and sizes</b> of elements.  </li>
+            <li>You can <b>change colors, shapes, and sizes</b> of elements. </li>
             <li>Supports <b>custom icons and images</b> inside the visualization. </li>
             <li> You can use <b>CSS styles</b> to make it look however you want. </b> </li>
           </ul>
@@ -162,7 +162,7 @@
 
         <li>
           <div class="text-left mt-5 ">
-            <h3><strong>Works in Any Browser Without Extra Software  </strong></h3>
+            <h3><strong>Works in Any Browser Without Extra Software </strong></h3>
           </div>
           <ul type="disc">
             <li>No need to install anything special—just <b>include a script in HTML.</b> </li>
@@ -171,15 +171,50 @@
           </ul>
         </li>
 
-        
+
       </ol>
     </div>
-    
+
     <div class="text-left mt-5 ">
       <h2><strong>Code Examples</strong></h2>
     </div>
     <div class="fs-5">
-      Till now you have see what is possible with vis.js now we will show you the basic concepts of how this functions. 
+      Till now you have see what is possible with vis.js now we will show you the basic concepts of how this functions.
+      <ol>
+        <li>
+          <div class="text-left mt-5 ">
+            <h4><strong>Components of vis.js </vis></strong></h4>
+          </div>
+          When working with vis.js, you deal with three main parts: 
+          <ol  type="i">
+            <li><h4>Data (Nodes & Edges / Items)</h4>
+              <ul type="disc">
+                <li>Nodes (in graphs/networks) or Items (in timelines) are the core elements. </li>
+                <li>Edges define connections between nodes. </li>
+              </ul>
+              <b>Example (Graph Data in JSON): </b>
+              <pre>
+                <code class="language-javascript">
+var nodes = new vis.DataSet([ 
+{ id: 1, label: "Node 1" }, 
+{ id: 2, label: "Node 2" } ]);  
+var edges = new vis.DataSet([ 
+{ from: 1, to: 2 } 
+]);</code>
+              </pre>
+            </li>
+
+            <li></li>
+          </ol>
+        </li>
+
+
+
+
+
+
+      </ol>
+
     </div>
 
 
@@ -194,7 +229,7 @@
 
 
 
-
+<!-- 
     <pre><code class="language-javascript">
   // Function to calculate z-values based on x and y
   function custom(x, y) {
@@ -233,7 +268,7 @@
     var container = document.getElementById("mygraph");
     new vis.Graph3d(container, data, options);
   }
-    </code></pre>
+    </code></pre> -->
 
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

@@ -18,7 +18,7 @@ function drawVisualization() {
   }
   console.log("Data being passed:", graphData);
   var graphOptions = {
-    
+
     style: "surface",
     showPerspective: true,
     showGrid: true,
@@ -70,3 +70,4 @@ function drawTimeline() {
 //   drawNodeGraph();
 //   drawTimeline();
 // });
+

@@ -10,7 +10,7 @@ pre[class*="language-javascript"] {
     
 }
 body{
-    margin:5%;
+    margin:2%;
 }
 
 .full-width-container {
@@ -46,6 +46,7 @@ body{
     line-height: 1.2 !important; /* Reduces extra spacing from line-height */
     border: none !important; /* Some themes add unnecessary borders */
 }
-/* body {
-  overflow-x: hidden;
-} */
+body {
+  overflow-x: auto;
+}
+

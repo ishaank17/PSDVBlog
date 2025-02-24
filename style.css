@@ -50,3 +50,9 @@ body {
   overflow-x: auto;
 }
 
+@media (max-width: 768px) {
+  container-fluid {
+    width: 400px;
+  }
+ 
+}

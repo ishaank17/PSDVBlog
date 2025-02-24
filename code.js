@@ -23,7 +23,7 @@ function drawVisualization() {
     showPerspective: true,
     showGrid: true,
     showShadow: false,
-    keepAspectRatio: true,
+    keepAspectRatio: false,
     verticalRatio: 0.5,
   };
 
